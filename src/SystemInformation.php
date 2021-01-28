@@ -215,7 +215,7 @@ class SystemInformation
 
     private function requireFiles()
     {
-        $psiRoot = __DIR__. '../vendor/phpsysinfo/phpsysinfo';
+        $psiRoot = base_path().'/vendor/phpsysinfo/phpsysinfo';
         $include = $psiRoot.'/includes';
 
         define('APP_ROOT', $psiRoot);
@@ -265,7 +265,7 @@ class SystemInformation
             /**
              * phpSysInfo configuration
              */
-            define('PSI_CONFIG_FILE', __DIR__ . '../vendor/phpsysinfo/phpsysinfo/phpsysinfo.ini');
+            define('PSI_CONFIG_FILE', __DIR__ . '/config/phpsysinfo.ini');
 
             define('ARRAY_EXP', '/^return array \([^;]*\);$/'); //array expression search
 
