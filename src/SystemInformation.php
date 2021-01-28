@@ -276,7 +276,6 @@ class SystemInformation
                 echo "ERROR: phpsysinfo.ini file is not parsable";
                 die();
             } else {
-                dump($config);
                 foreach ($config as $name => $group) {
                     if (strtoupper($name) == "MAIN") {
                         $name_prefix = 'PSI_';
