@@ -8,7 +8,7 @@ class SystemInformation
     /**
      * @var string phpsysinfo.ini path
      */
-    public $configFilePath = '@bs/phpSysInfo/config/phpsysinfo.ini';
+    public $configFilePath;
 
     /**
      * @var \PSI_Interface_OS
@@ -28,7 +28,6 @@ class SystemInformation
         $this->_sysinfo = new $os;
         $this->_sys = $this->_sysinfo->getSys();
         $this->configFilePath = __DIR__.'/config/phpsysinfo.ini'; 
-        // $this->configFilePath = __DIR__.'../vendor/phpsysinfo/phpsysinfo/php';
     }
 
     /**
